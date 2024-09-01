@@ -34,7 +34,6 @@ import SoftButton from "components/SoftButton";
 
 // Soft UI Dashboard React examples
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
-import SidenavCard from "examples/Sidenav/SidenavCard";
 
 // Custom styles for the Sidenav
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
@@ -144,6 +143,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           </SoftTypography>
         </SoftBox>
         <SoftBox component={NavLink} to="/" display="flex" alignItems="center">
+          {/* here the logo */}
           {brand && <SoftBox component="img" src={brand} alt="Soft UI Logo" width="2rem" />}
           <SoftBox
             width={!brandName && "100%"}
@@ -157,22 +157,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       </SoftBox>
       <Divider />
       <List>{renderRoutes}</List>
-      <SoftBox pt={2} my={2} mx={2} mt="auto">
-        <SidenavCard />
-        <SoftBox mt={2}>
-          <SoftButton
-            component="a"
-            href="https://creative-tim.com/product/soft-ui-dashboard-pro-react"
-            target="_blank"
-            rel="noreferrer"
-            variant="gradient"
-            color={color}
-            fullWidth
-          >
-            upgrade to pro
-          </SoftButton>
-        </SoftBox>
-      </SoftBox>
+      <SoftBox pt={2} my={2} mx={2} mt="auto"></SoftBox>
     </SidenavRoot>
   );
 }
